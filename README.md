@@ -20,3 +20,19 @@ console.log("                                 ");
 console.log(idiomas + "    " + sobrevc);
 console.log("                                 ");
 console.log(metas + "    ");
+
+Segunda feira 04/03/2024 
+var nome = prompt("Nome: "); 
+console.log("========================================="); 
+var cpf = prompt("CPF: "); 
+console.log("========================================="); 
+var data_nascimento = prompt("Data de Nascimento: "); 
+console.log("========================================"); 
+var localidade = prompt("Localidade: "); 
+console.log("========================================="); 
+var estado_civil = prompt("Estado Civil: "); 
+console.log("========================================="); 
+var naturalidade = prompt("Naturalidade: "); 
+console.log("=========================================");
+console.log("O candidato " +nome + ",portador do CPF " + cpf + " nascido em " + data_nascimento + " , sendo ele " + estado_civil + " ,localizado em " + localidade + " e natural de " + naturalidade + ".Confirma todos os seus dados"); 
+console.log("=========================================");
