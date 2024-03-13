@@ -20,7 +20,7 @@ console.log("                                 ");
 console.log(idiomas + "    " + sobrevc);
 console.log("                                 ");
 console.log(metas + "    ");
-----------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 Segunda feira 04/03/2024 
@@ -124,3 +124,104 @@ var notaB4 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Business: "));
 console.log("                                 ");
 var mediaB1 = (notaB1 + notaB2 + notaB3 + notaB4) /4;
 console.log(mediaB1);
+
+aula 13/03 Quarta-Feira
+
+var design = "Design"
+var notaD1 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Design: "));
+console.log("                                 ");
+var notaD2 = parseFloat(prompt("Insira A Nota Do 2° Bimestre Em Design: "));
+console.log("                                 ");
+var notaD3 = parseFloat(prompt("Insira A Nota Do 3° Bimestre Em Design: "));
+console.log("                                 ");
+var notaD4 = parseFloat(prompt("Insira A Nota Do 4° Bimestre Em Design: "));
+console.log("                                 ");
+var mediaD1 = (notaD1 + notaD2 + notaD3 + notaD4 ) /4;
+console.log("                                 ");
+var prompt =("A Media Do 1° Bimestre foi: ")
+console.log("A Média Em Design é: " + mediaD1 );
+console.log("                                 ");
+if (mediaD1 < 5) {
+    console.log("O Aluno Esta Reprovado Em Design");
+} else if (mediaD1 >= 5 && mediaD1 <= 7){
+    console.log("O Aluno Esta Em Recuperação Na Disciplina De Design ");
+} else {
+    console.log("Parabéns Você Foi Aprovado em Design ");
+}
+console.log("                                 ");
+
+
+
+
+//   AQUI É PROGRAMAÇÃO :::::::::::::::::
+var programacao = "Programação"
+var notaP1 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Programação: "));
+console.log("                                 ");
+var notaP2 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Programação: "));
+console.log("                                 ");
+var notaP3 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Programação: "));
+console.log("                                 ");
+var notaP4 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Programação: "));
+console.log("                                 ");
+var mediaP1 = (notaP1 + notaP2 + notaP3 + notaP4) /4;
+console.log("A Média Em Programação é: " + mediaP1 );
+console.log("                                 ");
+if (mediaP1 < 5) {
+    console.log("O Aluno Esta Reprovado Em Programção");
+} else if (mediaP1 >= 5 && mediaP1 <= 7){
+    console.log("O Aluno Esta Em Recuperação Na Disciplina De Programção ");
+} else {
+    console.log("Parabéns Você Foi Aprovado em Programção ");
+}
+console.log("                                 ");
+
+
+//   AQUI É MARKETING ::::::::::::::::::::::
+
+var marketing = "Marketing"
+var notaM1 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Marketing: "));
+console.log("                                 ");
+
+var notaM2 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Marketing: "));
+console.log("                                 ");
+
+var notaM3 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Marketing: "));
+console.log("                                 ");
+
+var notaM4 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Marketing: "));
+console.log("                                 ");
+
+var mediaM1 = (notaM1 + notaM2 + notaM3 + notaM4) /4;
+console.log("A Média Em Marketing é: " + mediaM1 );
+console.log("                                 ");
+if (mediaM1 < 5) {
+    console.log("O Aluno Esta Reprovado Em Marketing");
+} else if (mediaM1 >= 5 && mediaM1 <= 7){
+    console.log("O Aluno Esta Em Recuperação Na Disciplina De Marketing ");
+} else {
+    console.log("Parabéns Você Foi Aprovado em Marketing ");
+}
+console.log("                                 ");
+
+//AQUI É BUSINESS ::::::::::::::::::::::
+
+var busines = "Business"
+var notaB1 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Business: "));
+console.log("                                 ");
+var notaB2 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Business: "));
+console.log("                                 ");
+var notaB3 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Business: "));
+console.log("                                 ");
+var notaB4 = parseFloat(prompt("Insira A Nota Do 1° Bimestre Em Business: "));
+console.log("                                 ");
+var mediaB1 = (notaB1 + notaB2 + notaB3 + notaB4) /4;
+console.log("A Média Em Business é: " + mediaB1 );
+console.log("                                 ");
+ if (mediaB1 < 5) {
+    console.log("O Aluno Esta Reprovado Em Business");
+} else if (mediaB1 >= 5 && mediaB1 <= 7){
+    console.log("O Aluno Esta Em Recuperação Na Disciplina De Business ");
+} else {
+    console.log("Parabéns Você Foi Aprovado em Business ");
+}
+console.log("                                 ");
