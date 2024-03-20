@@ -225,3 +225,43 @@ console.log("                                 ");
     console.log("Parabéns Você Foi Aprovado em Business ");
 }
 console.log("                                 ");
+
+-----------------------------------------------------------------
+dia 20/03
+
+var nome = prompt("insira o seu nome: ");
+var idade = prompt("insira a sua idade: ");
+var escola = prompt("insira a sua escolaridade: ");
+var signo = prompt("insira seu signo: ");
+var senha = prompt("insira sua senha: ");
+ 
+if (nome == "Luiz"){
+    console.log("Nome Correto");
+}
+    else {
+        console.log("Nome Incorreto");
+    }
+    if (idade == 17){
+    console.log("Idade Correta");
+    }
+     else{
+         console.log("Idade Incorreta");
+     }
+     if (escola == "3 ano do ensino médio"){
+         console.log("Escolaridade Correta");
+     }
+     else {
+         console.log("Escolaridade Incorreta");
+         }
+         if (signo == "Peixes"){
+             console.log("Signo Correto");
+         }
+         else {
+             console.log("Signo Incorreto");
+         }
+     if (senha == "Abrir123"){
+ console.log("Acesso Liberado Bem Vindo Luiz!");
+} 
+else {
+console.log("Senha incorreta");
+}
