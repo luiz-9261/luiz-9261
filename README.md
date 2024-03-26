@@ -265,3 +265,42 @@ if (nome == "Luiz"){
 else {
 console.log("Senha incorreta");
 }
+
+TRABALHO PARA QUARTA FEIRA
+
+var nome = prompt("insira o seu nome: ");
+var data_de_nascimento = prompt("insira a sua data de nascimento: ");
+var comida_pref = prompt("insira a sua comida preferida: ");
+var marca = prompt("insira a melhor marca de carro ja feita no mundo: ");
+var senha = prompt("insira sua senha: ");
+ 
+if (nome == "luiz"){
+    console.log("Nome Correto");
+}
+    else {
+        console.log("Nome Incorreto");
+    }
+    if (data_de_nascimento == 232007){
+    console.log("Idade Correta");
+    }
+     else{
+         console.log("Idade Incorreta");
+     }
+     if (comida_pref == "churros"){
+         console.log("Comida preferida Correta");
+     }
+     else {
+         console.log("Comida preferida Incorreta");
+         }
+         if (marca == "BMW"){
+             console.log("Marca de carro preferida Correta");
+         }
+         else {
+             console.log("Marca de carro preferido Incorreto");
+         }
+     if (senha == "Bmw157"){
+ console.log("Acesso Liberado Bem Vindo Luiz!");
+} 
+else {
+console.log("Senha incorreta");
+}
