@@ -310,44 +310,65 @@ Lição de casa dia 31/03
 
 
 // Array com os produtos
+console.log("Seja Bem Vindo Ao Mercadinho Baratinho,Não Perca Seu Tempo e Faça Já Suas Compras!");
+console.log("_________________________________________________________________________________________  ");
 var produtos = [
-    { nome: "Produto 1", preco: 10 },
-    { nome: "Produto 2", preco: 20 },
-    { nome: "Produto 3", preco: 15 },
-    { nome: "Produto 4", preco: 25 },
-    { nome: "Produto 5", preco: 30 },
-    { nome: "Produto 6", preco: 18 },
-    { nome: "Produto 7", preco: 22 },
-    { nome: "Produto 8", preco: 12 },
-    { nome: "Produto 9", preco: 17 },
-    { nome: "Produto 10", preco: 28 },
-    { nome: "Produto 11", preco: 23 },
-    { nome: "Produto 12", preco: 19 },
-    { nome: "Produto 13", preco: 21 },
-    { nome: "Produto 14", preco: 16 },
-    { nome: "Produto 15", preco: 27 },
-    { nome: "Produto 16", preco: 14 },
-    { nome: "Produto 17", preco: 26 },
-    { nome: "Produto 18", preco: 24 },
-    { nome: "Produto 19", preco: 29 },
-    { nome: "Produto 20", preco: 11 }
+    { nome: "Cheetos 40g", preco: 14.90 },
+    { nome: "Ovo de Páscoa Lacta Diamante Negro Unidade com 300g", preco: 197.80 },
+    { nome: "Papel Higiênico Neve Folha Dupla - 30m Pacote com 24 unidades", preco: 29.97 },
+    { nome: "Detergente Líquido Limpol Cristal Frasco com 500ml", preco: 5 },
+    { nome: "Detergente em Pó Omo Lavagem perfeita Caixeta com 800g", preco: 29.79 },
+    { nome: "Desodorante Aerossol Dove Original Frasco com 200ml", preco: 18.90 },
+    { nome: "Vinho Argentino Felino Malbec Garrafa com 750ml", preco: 127.90 },
+    { nome: "Whisky Johnnie Walker Blue Label Garrafa com 750ml", preco: 789.90 },
+    { nome: "Batata Palha Yoki Tradicional Pacote com 105g", preco: 13 },
+    { nome: "Sabonete Dove Branco Pacote com 8x90g", preco: 28.99 },
+    { nome: "Macarrão Instantâneo Nissin Lámen Galinha caipira Pacote com 85g", preco: 4.50 },
+    { nome: "Óleo de Soja Soya Pet com 900ml", preco: 9 },
+    { nome: "Creme Dental Colgate com 90g", preco: 4.50 },
+    { nome: "Milho Verde Bonare Lata com 170g", preco: 4.70 },
+    { nome: "Farinha de Trigo Dona Benta Tipo 1 Pacote com 1kg", preco: 4.80 },
+    { nome: "Fermento em Pó Royal Pote com 100g", preco: 4.90 },
+    { nome: "Achocolatado em Pó Toddy Pote com 370g", preco: 8.40 },
+    { nome: "Leite Longa Vida Piracanjuba Com tampa Integral TP com 1L", preco: 5.60 },
+    { nome: "Café Cappuccino 3 Corações Classic Pote com 400g", preco: 25.97 },
+    { nome: "Pão de Forma Pullman Tradicional Pacote com 480g", preco: 6.80 }, 
+    { nome: "Bolacha Passa tempo 130g", preco: 7.60 },
 ];
 
 // Carrinho de compras
 var carrinho = [];
 
 // Função para adicionar produto ao carrinho
-function adicionarProduto(index) {
-    carrinho.push(produtos[index]);
-    console.log("Produto adicionado ao carrinho: " + produtos[index].nome);
-    atualizarCarrinho();
+function adicionarProduto() {
+    var opcao = prompt("Escolha o número do produto que deseja adicionar ao carrinho:\n" + listarProdutos() + "\nDigite '0' para finalizar e ir para o pagamento. ");
+    while (opcao !== "0") {
+        if (opcao !== null && opcao !== "") {
+            var index = parseInt(opcao) - 1;
+            if (index >= 0 && index < produtos.length) {
+                carrinho.push(produtos[index]);
+                console.log("Produto adicionado ao carrinho: " + produtos[index].nome);
+            } else {
+                console.log("Opção inválida.");
+            }
+        } else {
+            console.log("Nenhuma opção selecionada.");
+        }
+        opcao = prompt("Escolha o número do próximo produto ou digite '0' para finalizar e ir para o pagamento:");
+    }
+    if (carrinho.length > 0) {
+        atualizarCarrinho();
+        solicitarPagamento();
+    }
 }
 
-// Função para remover produto do carrinho
-function removerProduto(index) {
-    console.log("Produto removido do carrinho: " + carrinho[index].nome);
-    carrinho.splice(index, 1);
-    atualizarCarrinho();
+// Função para listar os produtos disponíveis
+function listarProdutos() {
+    var lista = "";
+    for (var i = 0; i < produtos.length; i++) {
+        lista += (i + 1) + ". " + produtos[i].nome + " - R$ " + produtos[i].preco.toFixed(2) + "\n";
+    }
+    return lista;
 }
 
 // Função para calcular o valor total do carrinho
@@ -389,7 +410,5 @@ function atualizarCarrinho() {
 }
 
 // Exemplo de uso
-adicionarProduto(0);
-adicionarProduto(1);
-removerProduto(0);
-solicitarPagamento();
+adicionarProduto();
+
