@@ -304,3 +304,92 @@ if (nome == "luiz"){
 else {
 console.log("Senha incorreta");
 }
+
+
+Lição de casa dia 31/03
+
+
+// Array com os produtos
+var produtos = [
+    { nome: "Produto 1", preco: 10 },
+    { nome: "Produto 2", preco: 20 },
+    { nome: "Produto 3", preco: 15 },
+    { nome: "Produto 4", preco: 25 },
+    { nome: "Produto 5", preco: 30 },
+    { nome: "Produto 6", preco: 18 },
+    { nome: "Produto 7", preco: 22 },
+    { nome: "Produto 8", preco: 12 },
+    { nome: "Produto 9", preco: 17 },
+    { nome: "Produto 10", preco: 28 },
+    { nome: "Produto 11", preco: 23 },
+    { nome: "Produto 12", preco: 19 },
+    { nome: "Produto 13", preco: 21 },
+    { nome: "Produto 14", preco: 16 },
+    { nome: "Produto 15", preco: 27 },
+    { nome: "Produto 16", preco: 14 },
+    { nome: "Produto 17", preco: 26 },
+    { nome: "Produto 18", preco: 24 },
+    { nome: "Produto 19", preco: 29 },
+    { nome: "Produto 20", preco: 11 }
+];
+
+// Carrinho de compras
+var carrinho = [];
+
+// Função para adicionar produto ao carrinho
+function adicionarProduto(index) {
+    carrinho.push(produtos[index]);
+    console.log("Produto adicionado ao carrinho: " + produtos[index].nome);
+    atualizarCarrinho();
+}
+
+// Função para remover produto do carrinho
+function removerProduto(index) {
+    console.log("Produto removido do carrinho: " + carrinho[index].nome);
+    carrinho.splice(index, 1);
+    atualizarCarrinho();
+}
+
+// Função para calcular o valor total do carrinho
+function calcularTotal() {
+    var total = 0;
+    for (var i = 0; i < carrinho.length; i++) {
+        total += carrinho[i].preco;
+    }
+    return total;
+}
+
+// Função para solicitar formas de pagamento
+function solicitarPagamento() {
+    var formasPagamento = ["Dinheiro", "Cartão de Crédito", "Cartão de Débito", "PIX", "Transferência Bancária"];
+    var opcoes = "";
+    for (var i = 0; i < formasPagamento.length; i++) {
+        opcoes += (i + 1) + ". " + formasPagamento[i] + "\n";
+    }
+    var escolha = prompt("Escolha a forma de pagamento:\n" + opcoes);
+    if (escolha !== null && escolha !== "") {
+        var index = parseInt(escolha) - 1;
+        if (index >= 0 && index < formasPagamento.length) {
+            console.log("Forma de pagamento selecionada: " + formasPagamento[index]);
+        } else {
+            console.log("Opção inválida.");
+        }
+    } else {
+        console.log("Nenhuma forma de pagamento selecionada.");
+    }
+}
+
+// Função para exibir o carrinho e o total
+function atualizarCarrinho() {
+    console.log("Carrinho de compras:");
+    for (var i = 0; i < carrinho.length; i++) {
+        console.log(carrinho[i].nome + " - R$ " + carrinho[i].preco.toFixed(2));
+    }
+    console.log("Total do carrinho: R$ " + calcularTotal().toFixed(2));
+}
+
+// Exemplo de uso
+adicionarProduto(0);
+adicionarProduto(1);
+removerProduto(0);
+solicitarPagamento();
