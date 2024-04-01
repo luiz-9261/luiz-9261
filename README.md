@@ -412,3 +412,73 @@ function atualizarCarrinho() {
 // Exemplo de uso
 adicionarProduto();
 
+Aula 1/4
+
+// Definição das perguntas e respostas
+const questions = [
+    { question: "Qual é a capital do Brasil?", answer: "brasilia" },
+    { question: "Quem escreveu Dom Quixote?", answer: "cervantes" },
+    { question: "Quantos planetas existem no sistema solar?", answer: "oito" },
+    { question: "Quem pintou a Mona Lisa?", answer: "davinci" },
+    { question: "Qual é o maior animal terrestre?", answer: "elefante" },
+    { question: "Quem descobriu a penicilina?", answer: "fleming" },
+    { question: "Qual é o rio mais longo do mundo?", answer: "nilo" },
+    { question: "Em que ano começou a Primeira Guerra Mundial?", answer: "1914" },
+    { question: "Qual é o maior país do mundo em área territorial?", answer: "russia" },
+    { question: "Quem foi o primeiro homem a pisar na Lua?", answer: "armstrong" },
+    { question: "Qual é o maior órgão do corpo humano?", answer: "pele" },
+    { question: "Quem foi o primeiro presidente do Brasil?", answer: "deodoro" },
+    { question: "Quantos elementos químicos naturais existem na Tabela Periódica?", answer: "92" },
+    { question: "Qual é o país com a maior população do mundo?", answer: "china" },
+    { question: "Quem escreveu A Odisséia?", answer: "homero" },
+    { question: "Qual é o nome da montanha mais alta do mundo?", answer: "everest" },
+    { question: "Quem pintou A Noite Estrelada?", answer: "vangogh" },
+    { question: "Qual é o maior deserto do mundo?", answer: "saara" },
+    { question: "Quem foi o primeiro presidente dos Estados Unidos?", answer: "washington" },
+    { question: "Quantos anos um presidente dos Estados Unidos pode ficar no cargo?", answer: "oito" },
+    { question: "Qual é o animal símbolo do Brasil?", answer: "onça" },
+    { question: "Quem escreveu Hamlet?", answer: "shakespeare" },
+    { question: "Quem foi o fundador da Microsoft?", answer: "gates" },
+    { question: "Qual é o maior oceano do mundo?", answer: "pacifico" },
+    { question: "Quem inventou a lâmpada elétrica?", answer: "edison" }
+];
+
+// Variáveis globais
+let currentQuestionIndex = 0;
+let points = 0;
+
+// Função para fazer uma pergunta e verificar a resposta
+function askQuestion() {
+    const question = questions[currentQuestionIndex].question;
+    const userAnswer = prompt(question);
+    const correctAnswer = questions[currentQuestionIndex].answer;
+
+    if (userAnswer && userAnswer.toLowerCase() === correctAnswer) {
+        points += 3; // Ganha 3 pontos se a resposta estiver correta
+        alert("Resposta correta! Você ganhou 3 pontos.");
+    } else {
+        points -= 2; // Perde 2 pontos se a resposta estiver incorreta
+        alert("Resposta incorreta! Você perdeu 2 pontos.");
+    }
+
+    currentQuestionIndex++;
+
+    // Verifica se o jogo acabou
+    if (currentQuestionIndex < questions.length) {
+        askQuestion();
+    } else {
+        endGame();
+    }
+}
+
+// Função para encerrar o jogo e mostrar o resultado
+function endGame() {
+    if (points >= 30) {
+        alert("Parabéns! Você venceu o nível 1 do jogo. Estamos trabalhando no nível 2. Volte em breve!");
+    } else {
+        alert("Você perdeu. Melhore sua pontuação na próxima vez!");
+    }
+}
+
+// Inicialização do jogo
+askQuestion();
