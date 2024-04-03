@@ -482,3 +482,89 @@ function endGame() {
 
 // Inicialização do jogo
 askQuestion();
+
+
+aula 03/04
+
+ // Definindo as variáveis das perguntas e respostas
+const perguntas = [
+    "Qual sua idade?",
+    "Qual seu número de telefone?",
+    "Qual sua cidade?",
+    "Qual sua cor favorita?",
+    "Qual seu número da sorte?",
+    "Qual a capital do Brasil?"
+];
+
+const respostas = [
+    "18",
+    "190",
+    "São Vicente",
+    "Azul",
+    "5",
+    "Brasília"
+];
+
+// Função para realizar o quiz
+function fazerQuiz() {
+    let pontos = 0;
+
+    // Perguntando e validando a idade
+    let idade = prompt(perguntas[0]);
+    if (idade.trim().toLowerCase() === respostas[0].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[0]);
+    }
+
+    // Perguntando e validando o número de telefone
+    let telefone = prompt(perguntas[1]);
+    if (telefone.trim().toLowerCase() === respostas[1].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[1]);
+    }
+
+    // Perguntando e validando a cidade
+    let cidade = prompt(perguntas[2]);
+    if (cidade.trim().toLowerCase() === respostas[2].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[2]);
+    }
+
+    // Perguntando e validando a cor favorita
+    let corFavorita = prompt(perguntas[3]);
+    if (corFavorita.trim().toLowerCase() === respostas[3].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[3]);
+    }
+
+    // Perguntando e validando o número da sorte
+    let numeroSorte = prompt(perguntas[4]);
+    if (numeroSorte.trim().toLowerCase() === respostas[4].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[4]);
+    }
+
+    // Perguntando e validando a capital do Brasil
+    let capitalBrasil = prompt(perguntas[5]);
+    if (capitalBrasil.trim().toLowerCase() === respostas[5].toLowerCase()) {
+        pontos++;
+        console.log("Resposta correta!");
+    } else {
+        console.log("Resposta incorreta. A resposta correta era: " + respostas[5]);
+    }
+
+    console.log("Você acertou " + pontos + " de 6 perguntas.");
+}
+
+// Executando o quiz
+fazerQuiz();
