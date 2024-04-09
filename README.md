@@ -568,3 +568,50 @@ function fazerQuiz() {
 
 // Executando o quiz
 fazerQuiz();
+
+__________________________codigo da aula de 8/04_________________________________
+
+// Solicitar dois números ao usuário
+let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+let numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+// Perguntar ao usuário qual operação deseja realizar
+let operacao = prompt("Escolha a operação desejada: \n1. Divisão (/) \n2. Multiplicação (*) \n3. Adição (+) \n4. Subtração (-) \nDigite o número correspondente à operação desejada:");
+
+// Verificar se a opção selecionada é válida
+if (operacao === '1' || operacao === '2' || operacao === '3' || operacao === '4') {
+  // Verificar a operação escolhida pelo usuário e calcular o resultado
+  let resultado;
+  switch (operacao) {
+    case '1':
+    case 'Divisão':
+    case '/':
+      if (numero2 !== 0) {
+        resultado = numero1 / numero2;
+        console.log(`O resultado da divisão é: ${resultado}`);
+      } else {
+        console.log("Não é possível dividir por zero.");
+      }
+      break;
+    case '2':
+    case 'Multiplicação':
+    case '*':
+      resultado = numero1 * numero2;
+      console.log(`O resultado da multiplicação é: ${resultado}`);
+      break;
+    case '3':
+    case 'Adição':
+    case '+':
+      resultado = numero1 + numero2;
+      console.log(`O resultado da adição é: ${resultado}`);
+      break;
+    case '4':
+    case 'Subtração':
+    case '-':
+      resultado = numero1 - numero2;
+      console.log(`O resultado da subtração é: ${resultado}`);
+      break;
+  }
+} else {
+  console.log("Opção inválida. Por favor, escolha uma das opções válidas (1, 2, 3 ou 4).");
+}
