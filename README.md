@@ -615,3 +615,71 @@ if (operacao === '1' || operacao === '2' || operacao === '3' || operacao === '4'
 } else {
   console.log("Opção inválida. Por favor, escolha uma das opções válidas (1, 2, 3 ou 4).");
 }
+
+
+________________________________________________________________________________________
+teste avaliativo 10/04
+
+const usuarios = {
+  "Maria": "456",
+  "Juliana": "789",
+  "Thamires": "123",
+  "Fernanda": "000"
+};
+
+let usuarioLogado;
+
+const login = () => {
+  const usuario = prompt("Digite seu nome de usuário:");
+  const senha = prompt("Digite sua senha:");
+
+  if (usuarios[usuario] === senha) {
+    usuarioLogado = usuario;
+    return true;
+  } else {
+    alert("Usuário ou senha incorretos");
+    return false;
+  }
+};
+
+const menuFuncionario = () => {
+  const opcao = prompt("Escolha uma opção:\n1. Vendedor\n2. Supervisor");
+
+  if (opcao === "1") {
+    menuVendedor();
+  } else if (opcao === "2") {
+    menuSupervisor();
+  } else {
+    alert("Opção inválida");
+  }
+};
+
+const menuVendedor = () => {
+  let valorTotal = 0;
+
+  do {
+    const produto = prompt("Informe o nome do produto:");
+    const valor = parseFloat(prompt("Informe o valor do produto:"));
+    valorTotal += valor;
+
+    const adicionarMais = prompt("Deseja adicionar mais itens? (S/N)").toUpperCase();
+    if (adicionarMais !== "S") {
+      break;
+    }
+  } while (true);
+
+  alert(`Valor total da compra: ${valorTotal.toFixed(2)}`);
+};
+
+const menuSupervisor = () => {
+  // Implemente as opções do supervisor aqui, se necessário
+  alert("Opção do supervisor: Gerenciamento de produtos");
+};
+
+const iniciarPrograma = () => {
+  if (login()) {
+    menuFuncionario();
+  }
+};
+
+iniciarPrograma();
