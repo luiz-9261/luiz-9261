@@ -683,3 +683,49 @@ const iniciarPrograma = () => {
 };
 
 iniciarPrograma();
+
+_____________________________________________________________________________________
+
+
+// Função para calcular a idade com base na data de nascimento
+function calcularIdade(anoNascimento) {
+    var anoAtual = new Date().getFullYear();
+    return anoAtual - anoNascimento;
+}
+
+// Preenchimento dos dados do usuário
+var nome = prompt("Digite o nome do usuário: ");
+console.log(                                                                  );
+var diaNascimento = prompt("Digite o dia de nascimento: ");
+console.log(                                                                  );
+var mesNascimento = prompt("Digite o mês de nascimento: ");
+console.log(                                                                  );
+var anoNascimento = prompt("Digite o ano de nascimento: ");
+console.log(                                                                  );
+var telefone = prompt("Digite o telefone: ");
+console.log(                                                                  );
+var cidade = prompt("Digite a cidade: ");
+console.log(                                                                  );
+var estado = prompt("Digite o estado: ");
+console.log(                                                                  );
+var nacionalidade = prompt("Digite a nacionalidade: ");
+console.log(                                                                  );
+
+// Imprimir os dados do usuário
+console.log("O usuário " + nome + " nascido no dia " + diaNascimento + ", do " + mesNascimento + ", de " + anoNascimento + ", portador do telefone " + telefone + ", reside na cidade " + cidade + ", no estado de " + estado + " e possui nacionalidade " + nacionalidade);
+console.log(                                                                  );
+// Verificar se o usuário possui menos de 18 anos
+var idade = calcularIdade(parseInt(anoNascimento));
+if (idade < 18) {
+    console.log("Usuário não possui a idade mínima para acessar o sistema.");
+} else {
+    console.log("Acesso liberado.");
+}
+console.log(                                                                  );
+// Verificar se o usuário possui nacionalidade brasileira
+if (nacionalidade.toLowerCase() === "brasileira") {
+    console.log("Usuário com permissão para utilizar em território nacional.");
+} else {
+    console.log("Usuário não possui permissão para navegar em nosso software.");
+}
+ 
