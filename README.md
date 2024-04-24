@@ -729,3 +729,78 @@ if (nacionalidade.toLowerCase() === "brasileira") {
     console.log("Usuário não possui permissão para navegar em nosso software.");
 }
  
+____________________________________________________________________________________________________________
+
+Ultimo codigo
+
+// Parte 1: Sistema de Codificação de Segurança
+let senhaCorreta = "9261";
+
+function verificarSenha(senha) {
+    if (senha === senhaCorreta) {
+        console.log("Acesso permitido!");
+    } else {
+        console.log("Senha incorreta. Por favor, redefina sua senha.");
+        redefinirSenha();
+    }
+}
+
+function redefinirSenha() {
+    const novaSenha = prompt("Digite uma nova senha:");
+    senhaCorreta = novaSenha;
+    console.log("Senha redefinida com sucesso!");
+}
+
+// Parte 2: Sistema de Solicitação de Dados
+function solicitarDados() {
+    const nome = prompt("Digite seu nome:");
+    const cpf = prompt("Digite seu CPF:");
+    const rg = prompt("Digite seu RG:");
+    const dataNascimento = prompt("Digite sua data de nascimento (Formato: DD/MM/AAAA):");
+    const telefone = prompt("Digite seu telefone:");
+    const endereco = prompt("Digite seu endereço:");
+
+    console.log("Nome:", nome);
+    console.log("CPF:", cpf);
+    console.log("RG:", rg);
+    console.log("Data de Nascimento:", dataNascimento);
+
+    // Calculando a idade do usuário
+    const hoje = new Date();
+    const [dia, mes, ano] = dataNascimento.split("/");
+    const dataNasc = new Date(`${ano}-${mes}-${dia}`);
+    const diff = Math.abs(hoje - dataNasc);
+    const idade = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    console.log("Idade:", idade);
+
+    // Determinando o signo do usuário (simplificado)
+    const signos = [
+        "Capricórnio", "Aquário", "Peixes", "Áries", "Touro", "Gêmeos",
+        "Câncer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricórnio"
+    ];
+    const signo = signos[mes - 1];
+    console.log("Signo:", signo);
+
+    console.log("Telefone:", telefone);
+    console.log("Endereço:", endereco);
+}
+
+// Parte 3: Decodificação da Senha
+function decodificarSenha() {
+    const senha1 = parseInt(prompt("Digite o primeiro número da senha:"));
+    const senha2 = parseInt(prompt("Digite o segundo número da senha:"));
+
+    const soma = senha1 + senha2;
+    console.log("Resultado da soma:", soma);
+
+    if (soma % 2 === 0) {
+        console.log("Senha incorreta.");
+    } else {
+        console.log("Usuário com acesso liberado.");
+    }
+}
+
+// Executar o sistema
+verificarSenha(prompt("Digite sua senha:"));
+solicitarDados();
+decodificarSenha();
